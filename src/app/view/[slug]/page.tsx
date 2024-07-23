@@ -28,6 +28,7 @@ import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import type { VncViewerHandle } from "@/components/vnc-screen";
 import { fetcher } from "@/lib/utils";
+import Image from "next/image";
 import {
 	AlertCircle,
 	Camera,
@@ -43,7 +44,6 @@ import {
 	RotateCw,
 	ScreenShareOff,
 	Settings,
-	Sparkles,
 	Square,
 	TrashIcon,
 	Upload,
@@ -57,7 +57,14 @@ import useSWR from "swr";
 type ScalingValues = "remote" | "local" | "none";
 const Loading = ({ text }: { text: string }) => (
 	<Card className="flex absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 flex-col items-center justify-center gap-2 size-72">
-		<Sparkles className="size-16 animate-pulse" />
+		<div className="logoImg">    
+<Image
+      src="/icon.png"
+      width={48}
+      height={48}
+      alt="Catway"
+    />
+</div>
 		<h1 className="text-xl font-semibold">{text}</h1>
 	</Card>
 );
@@ -154,7 +161,7 @@ export default function View({ params }: { params: { slug: string } }) {
 					<Button asChild size="icon" variant="ghost">
 						<Link
 							href={`/api/session/${params.slug}/preview`}
-							download={`stardust-${params.slug.slice(0, 6)}-${new Date().toLocaleDateString("en-us")}`}
+							download={`catway-${params.slug.slice(0, 6)}-${new Date().toLocaleDateString("en-us")}`}
 							target="_blank"
 						>
 							<Camera />

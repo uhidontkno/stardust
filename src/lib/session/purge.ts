@@ -4,7 +4,7 @@ import { consola } from "consola";
 import { eq, lte } from "drizzle-orm";
 
 setInterval(async () => {
-	consola.info("✨ Stardust: Purging stale sessions");
+	consola.info("✨ Catway: Purging stale sessions");
 	await db.transaction(async (tx) => {
 		const staleSessions = await tx.select().from(session).where(lte(session.expiresAt, Date.now()));
 		await Promise.all(

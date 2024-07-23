@@ -8,12 +8,12 @@ import { consola } from "consola";
  */
 async function sessionRunning(ip: string) {
 	let containerRunning = await fetch(`http://${ip}:6080/healthcheck`).catch(() =>
-		consola.warn(`✨ Stardust: Container on ${ip} not running, retrying...`),
+		consola.warn(`✨ Catway: Container on ${ip} not running, retrying...`),
 	);
 	while (!containerRunning) {
 		await new Promise((resolve) => setTimeout(resolve, 2000));
 		containerRunning = await fetch(`http://${ip}:6080/healthcheck`).catch(() =>
-			consola.warn(`✨ Stardust: Container on ${ip} not running, retrying...`),
+			consola.warn(`✨ Catway: Container on ${ip} not running, retrying...`),
 		);
 	}
 }

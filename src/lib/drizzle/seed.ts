@@ -33,7 +33,7 @@ import { db, image as imageSchema } from "@/lib/drizzle/db";
 			dockerImage: "ghcr.io/spaceness/pinball",
 			friendlyName: "Pinball",
 			category: ["Games"],
-			icon: "/icon.svg",
+			icon: "/icon.png",
 		},
 		{
 			dockerImage: "ghcr.io/spaceness/gimp",
@@ -43,22 +43,22 @@ import { db, image as imageSchema } from "@/lib/drizzle/db";
 		},
 	];
 	const insertion = await db.insert(imageSchema).values(images).onConflictDoNothing().returning();
-	console.log(`✨Stardust: Seeded ${insertion.length} images.`);
-	console.log(`✨Stardust: Seeded ${insertion.map((i) => i.dockerImage).join(", ") || "no images"}`);
+	console.log(`✨Catway: Seeded ${insertion.length} images.`);
+	console.log(`✨Catway: Seeded ${insertion.map((i) => i.dockerImage).join(", ") || "no images"}`);
 	if (process.argv.includes("--pull")) {
 		console.log("Pulling images...");
 		for (const image of images) {
 			await new Promise<void>((resolve, reject) => {
-				console.log(`✨Stardust: Pulling image ${image.dockerImage}`);
+				console.log(`✨Catway: Pulling image ${image.dockerImage}`);
 				exec(`docker pull ${image.dockerImage}`, (err, stdout, stderr) => {
 					if (err) {
-						console.error(`✨Stardust: Error pulling image ${image.dockerImage}`);
+						console.error(`✨Catway: Error pulling image ${image.dockerImage}`);
 						console.error(stderr);
 						console.error(err);
 						reject(err);
 					} else {
 						console.log(stdout);
-						console.log(`✨Stardust: Pulled image ${image.dockerImage}`);
+						console.log(`✨Catway: Pulled image ${image.dockerImage}`);
 						resolve();
 					}
 				});

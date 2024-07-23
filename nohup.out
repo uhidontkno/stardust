@@ -1,0 +1,17 @@
+
+> catway@1.0 start /home/rare/stardust
+> NODE_ENV=production tsx server.ts
+
+◐ ✨ Catway: Starting production server...
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+ℹ ✨ Catway: Purging stale sessions
+Killed

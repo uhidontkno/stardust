@@ -10,16 +10,16 @@ import { auth } from "../auth";
 import { getConfig } from "../config";
 import { getSession } from "./get-session";
 /**
- * Creates a new Stardust session
+ * Creates a new Catway session
  * @param image Docker image to use for making the session
  */
 async function createSession(image: string) {
-	consola.info(`✨ Stardust: Creating session with image ${image}`);
+	consola.info(`✨ Catway: Creating session with image ${image}`);
 	try {
 		const config = getConfig();
 		const userSession = await auth();
 		if (!userSession?.user) throw new Error("User not found");
-		const id = `stardust-${crypto.randomUUID()}-${image.split("/")[2]}`;
+		const id = `catway-${crypto.randomUUID()}-${image.split("/")[2]}`;
 		const container = await docker.createContainer({
 			name: id,
 			Image: image,
@@ -54,7 +54,7 @@ async function createSession(image: string) {
 	}
 }
 /**
- * Allows you to manage a Stardust session with dockerode
+ * Allows you to manage a Catway session with dockerode
  * @param containerId The id of the container to manage
  * @param action The action to do on the container
  * @param admin If this is triggered by an admin
@@ -72,7 +72,7 @@ async function manageSession(containerId: string, action: keyof Dockerode.Contai
 	}
 }
 /**
- * Deletes a Stardust session
+ * Deletes a Catway session
  * @param containerId The id of the container to delete
  * @param admin If this is triggered by an admin
  */

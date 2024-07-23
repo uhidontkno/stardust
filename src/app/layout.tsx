@@ -18,18 +18,18 @@ const shouldDisplayMetadata = () => {
 export function generateMetadata(): Metadata {
 	return {
 		title: {
-			default: "Stardust",
-			template: "%s | Stardust",
+			default: "Catway",
+			template: "%s | Catway",
 		},
 		description: shouldDisplayMetadata()
-			? "Stardust is the platform for streaming isolated desktop containers."
+			? "Catway is the platform for streaming isolated desktop containers."
 			: undefined,
 		openGraph: shouldDisplayMetadata()
 			? {
-					title: "Stardust",
-					description: "Stardust is the platform for streaming isolated desktop containers.",
+					title: "Catway",
+					description: "Catway is the platform for streaming isolated desktop containers.",
 					type: "website",
-					url: "https://stardust.spaceness.one",
+					url: "https://catway.spaceness.one",
 				}
 			: undefined,
 	};

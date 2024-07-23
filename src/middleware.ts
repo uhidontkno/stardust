@@ -12,5 +12,5 @@ export const middleware = auth(async (req) => {
 	return NextResponse.redirect(url);
 });
 export const config = {
-	matcher: ["/((?!_next/static|_next/image|icon.svg|websockify|api/auth|manifest.webmanifest).*)"],
+	matcher: ["/((?!_next/static|_next/image|icon.png|websockify|api/auth|manifest.webmanifest).*)"],
 };

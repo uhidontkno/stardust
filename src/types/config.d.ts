@@ -4,7 +4,7 @@ export interface Config {
 	 */
 	databaseUrl: string;
 	/**
-	 * The public URL of your Stardust instance. Use this if you want to display site metadata.
+	 * The public URL of your Catway instance. Use this if you want to display site metadata.
 	 */
 	metadataUrl?: string;
 	docker: DockerConfig;

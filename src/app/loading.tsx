@@ -1,9 +1,16 @@
-import { Sparkles } from "lucide-react";
+import Image from 'next/image'
 
 export default function LoadSuspense() {
 	return (
 		<div className="flex justify-center items-center h-screen">
-			<Sparkles className="size-16 animate-pulse" />
+			<div className="logoImg">    
+<Image
+      src="/icon.png"
+      width={48}
+      height={48}
+      alt="Catway"
+    />
+</div>
 		</div>
 	);
 }

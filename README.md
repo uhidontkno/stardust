@@ -1,4 +1,4 @@
-<img alt="Stardust banner" src="media/banner.png">
+<img alt="Catway banner" src="media/banner.png">
 <p align="center">An open-source <a href="https://kasmweb.com">Kasm Workspaces</a> alternative.<br></p>
 <hr>
 <p align="center">Join our Discord server</p>
@@ -11,7 +11,7 @@
 
 ## Setup
 
-Follow the steps below to set up Stardust.
+Follow the steps below to set up Catway.
 
 First, install the dependencies:
 
@@ -35,5 +35,5 @@ pnpm start
 
 <hr>
 
-🎉 There you have it, enjoy Stardust.
+🎉 There you have it, enjoy Catway.
 

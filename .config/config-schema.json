@@ -85,7 +85,7 @@
 					"$ref": "#/definitions/DockerConfig"
 				},
 				"metadataUrl": {
-					"description": "The public URL of your Stardust instance. Use this if you want to display site metadata.",
+					"description": "The public URL of your Catway instance. Use this if you want to display site metadata.",
 					"type": "string"
 				},
 				"session": {

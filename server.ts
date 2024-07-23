@@ -16,7 +16,7 @@ if (process.argv.includes("--turbo")) {
 }
 const server = createServer();
 const app = next({ dev, port, httpServer: server, hostname: process.env.HOSTNAME });
-consola.start(`✨ Stardust: Starting ${dev ? "development" : "production"} server...`);
+consola.start(`✨ Catway: Starting ${dev ? "development" : "production"} server...`);
 await app.prepare();
 const nextRequest = app.getRequestHandler();
 const nextUpgrade = app.getUpgradeHandler();
@@ -36,7 +36,7 @@ websockify.on("connection", async (ws, req) => {
 		});
 		ws.on("close", (code, reason) => {
 			consola.info(
-				`✨ Stardust: Connection closed with code ${code} and ${
+				`✨ Catway: Connection closed with code ${code} and ${
 					reason.toString() ? `reason ${reason.toString()}` : "no reason"
 				}`,
 			);
@@ -48,7 +48,7 @@ websockify.on("connection", async (ws, req) => {
 		});
 
 		socket.on("error", (err) => {
-			consola.warn(`✨ Stardust: ${err.message}`);
+			consola.warn(`✨ Catway: ${err.message}`);
 			ws.close();
 		});
 
@@ -57,7 +57,7 @@ websockify.on("connection", async (ws, req) => {
 		});
 	} catch (error) {
 		ws.close(1008, "Server error");
-		consola.error(`✨ Stardust: ${(error as Error).message}`);
+		consola.error(`✨ Catway: ${(error as Error).message}`);
 	}
 });
 server.on("request", nextRequest);
@@ -71,5 +71,5 @@ server.on("upgrade", async (req, socket, head) => {
 	}
 });
 server.listen(port, () => {
-	consola.success(`✨ Stardust: Server listening on ${port}`);
+	consola.success(`✨ Catway: Server listening on ${port}`);
 });

@@ -103,3 +103,5 @@
         @apply bg-background text-foreground;
     }
 }
+
+.iconImg img {width:2em;height:2em;}

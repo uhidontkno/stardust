@@ -1,14 +1,21 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Sparkles } from "lucide-react";
+import Image from 'next/image'
 export default function ErrorPage({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
 	return (
 		<div className="flex h-screen flex-col items-center justify-center">
 			<div className="flex h-[32rem] w-96 flex-col items-center justify-center gap-4">
 				<div className="mb-4 flex items-center justify-center text-left text-2xl font-bold">
-					<Sparkles />
-					<span className="ml-2 text-2xl font-bold">Stardust</span>
+					<div className="logoImg">    
+<Image
+      src="/icon.png"
+      width={48}
+      height={48}
+      alt="Catway"
+    />
+</div>
+					<span className="ml-2 text-2xl font-bold">Catway</span>
 				</div>
 				<p className="text-center text-4xl font-bold text-primary">Session Error</p>
 				<div className="flex flex-col items-center justify-center gap-4">

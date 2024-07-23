@@ -1,5 +1,5 @@
 {
-  description = "Stardust";
+  description = "Catway";
   inputs = {
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-unstable";

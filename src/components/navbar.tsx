@@ -2,6 +2,7 @@
 import packageJson from "@/../package.json";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import Image from 'next/image'
 import {
 	Dialog,
 	DialogContent,
@@ -90,8 +91,15 @@ export default function Navigation({
 	return (
 		<nav className="flex h-16 min-w-full items-center justify-between px-4">
 			<div className="flex items-center justify-start gap-2">
-				<Sparkles className="size-6" />
-				<span className="text-2xl font-bold md:block hidden mr-2">Stardust</span>
+			    <div className="logoImg">    
+<Image
+      src="/icon.png"
+      width={48}
+      height={48}
+      alt="Catway"
+    />
+</div>
+				<span className="text-2xl font-bold md:block hidden mr-2">Catway</span>
 				<NavigationMenu className="flex items-center justify-start">
 					<NavigationMenuList>
 						{navigationItems.map((item) => (
@@ -115,7 +123,7 @@ export default function Navigation({
 					<DialogHeader>
 						<DialogTitle className="m-2 flex items-center justify-center text-center text-2xl text-foreground">
 							<Sparkles className="mr-2 flex size-6 flex-row" />
-							Stardust {packageJson.version}
+							Stardust {packageJson.version}-catway
 						</DialogTitle>
 					</DialogHeader>
 					<DialogDescription className="flex flex-col items-start justify-start gap-2 text-foreground">
@@ -137,7 +145,7 @@ export default function Navigation({
 								</li>
 							))}
 						</ul>
-						Developers:
+						Stardust Developers:
 						<br />
 						<ul className="list-inside list-disc">
 							{developers.map((developer) => (
@@ -239,7 +247,7 @@ export default function Navigation({
 						</DropdownMenuSub>
 						<DropdownMenuItem onClick={() => setDialogOpen((prev) => !prev)}>
 							<Info className="size-4 mr-2" />
-							<span>About Stardust</span>
+							<span>About Catway</span>
 						</DropdownMenuItem>
 						<DropdownMenuItem asChild>
 							<Link href="/auth/reset-password">

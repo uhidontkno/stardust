@@ -6,8 +6,8 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 export const metadata: Metadata = {
 	title: {
-		absolute: "Admin | Stardust",
-		template: " %s | Stardust",
+		absolute: "Admin | Catway",
+		template: " %s | Catway",
 	},
 };
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
