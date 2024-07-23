@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
 		name: "Catway",
 		short_name: "Catway",
 		description: "Catway is the platform for streaming isolated desktop containers.",
-		start_url: "/",
+		start_url: "/dash",
 		display: "standalone",
 		background_color: "#1e1e2e",
 		theme_color: "#cba6f7",

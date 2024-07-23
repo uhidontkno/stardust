@@ -27,7 +27,7 @@ export default function SignOut() {
 				variant="outline"
 				className="mt-4 w-full bg-background/50 transition-all duration-200 hover:bg-background/65"
 			>
-				<Link href="/">
+				<Link href="/dash">
 					<ChevronLeft className="mr-2 size-4" />
 					Go Home
 				</Link>

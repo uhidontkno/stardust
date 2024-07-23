@@ -21,7 +21,7 @@ export default function NotFound() {
 				<div className="flex flex-col items-center justify-center">
 					<p className="text-center">The page you are looking for does not exist.</p>
 					<Button className="text-center" variant="link" asChild>
-						<Link href="/">Go home</Link>
+						<Link href="/dash">Go home</Link>
 					</Button>
 				</div>
 			</div>

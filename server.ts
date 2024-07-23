@@ -23,7 +23,7 @@ const nextUpgrade = app.getUpgradeHandler();
 const websockify = new WebSocketServer({ noServer: true });
 websockify.on("connection", async (ws, req) => {
 	try {
-		const id = req.url?.split("/")[2];
+		const id = req.url?.split("/dash")[2];
 		if (!id) {
 			ws.close(1008, "Missing ID");
 			return;

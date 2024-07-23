@@ -36,6 +36,11 @@ const nextConfig = {
 				destination: "/auth/error",
 				permanent: true,
 			},
+			{
+				source: "/",
+				destination: "/dash",
+				permanent: true,
+			},
 		];
 	},
 	webpack(config, { webpack }) {

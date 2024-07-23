@@ -19,7 +19,7 @@ async function createSession(image: string) {
 		const config = getConfig();
 		const userSession = await auth();
 		if (!userSession?.user) throw new Error("User not found");
-		const id = `catway-${crypto.randomUUID()}-${image.split("/")[2]}`;
+		const id = `catway-${crypto.randomUUID()}-${image.split("/dash")[2]}`;
 		const container = await docker.createContainer({
 			name: id,
 			Image: image,
@@ -87,7 +87,7 @@ async function deleteSession(containerId: string, admin?: boolean) {
 		const container = docker.getContainer(id || containerId);
 		await container.remove({ force: true });
 		await db.delete(session).where(eq(session.id, id || containerId));
-		revalidatePath("/");
+		revalidatePath("/dash");
 	}
 }
 export { createSession, deleteSession, manageSession };

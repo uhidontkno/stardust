@@ -59,7 +59,7 @@ export default function Navigation({
 		{
 			icon: <ComputerIcon />,
 			label: "Dashboard",
-			href: "/",
+			href: "/dash",
 			adminOnly: false,
 		},
 		{

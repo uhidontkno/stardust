@@ -190,7 +190,7 @@ export default function View({ params }: { params: { slug: string } }) {
 								onClick={() => {
 									setSidebarOpen(false);
 									vncRef.current?.rfb?.disconnect();
-									router.push("/");
+									router.push("/dash");
 								}}
 							>
 								<ScreenShareOff className="mr-2 size-5 flex-shrink-0" />
@@ -202,7 +202,7 @@ export default function View({ params }: { params: { slug: string } }) {
 									toast.promise(
 										async () => {
 											await manageSession(params.slug, "pause");
-											router.push("/");
+											router.push("/dash");
 										},
 										{
 											loading: "Pausing container...",
@@ -235,7 +235,7 @@ export default function View({ params }: { params: { slug: string } }) {
 									toast.promise(
 										async () => {
 											await manageSession(params.slug, "stop");
-											router.push("/");
+											router.push("/dash");
 										},
 										{
 											loading: "Stopping container...",
@@ -272,7 +272,7 @@ export default function View({ params }: { params: { slug: string } }) {
 												toast.promise(
 													async () => {
 														await deleteSession(params.slug);
-														router.push("/");
+														router.push("/dash");
 													},
 													{
 														loading: "Deleting session...",

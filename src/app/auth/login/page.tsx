@@ -20,7 +20,7 @@ export default async function Login({
 	searchParams: { [key: string]: string | string[] | undefined };
 }) {
 	const session = await auth();
-	if (session) redirect("/");
+	if (session) redirect("/dash");
 	const { error, message } = searchParams;
 	const config = getConfig();
 	return (

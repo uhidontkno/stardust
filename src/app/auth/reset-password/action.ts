@@ -20,14 +20,14 @@ export async function resetPassword(dbUser: SelectUser | undefined, data: FormDa
 			if (await verify(dbUser.password, oldPassword)) {
 				const newPasswordHash = await hash(newPw as string);
 				await db.update(user).set({ password: newPasswordHash }).where(eq(user.id, dbUser.id));
-				redirect("/");
+				redirect("/dash");
 			} else {
 				throw new Error("Incorrect password");
 			}
 		} else if (!oldPassword && !dbUser.password) {
 			const newPasswordHash = await hash(newPw as string);
 			await db.update(user).set({ password: newPasswordHash }).where(eq(user.id, dbUser.id));
-			redirect("/");
+			redirect("/dash");
 		} else {
 			throw new Error("ehhh this ain't supposed to happen, why is there nothing");
 		}

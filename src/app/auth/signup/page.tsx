@@ -19,7 +19,7 @@ export default async function Page({
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
   const session = await auth();
-  if (session) redirect("/");
+  if (session) redirect("/dash");
   const config = getConfig();
   const { message, error } = searchParams;
   if (!config.auth.credentials || !config.auth.credentials.signups)

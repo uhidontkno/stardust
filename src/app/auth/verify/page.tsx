@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 export default async function EmailVerify() {
 	const session = await auth();
 	if (session) {
-		redirect("/");
+		redirect("/dash");
 	}
 	return (
 		<>

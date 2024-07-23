@@ -17,7 +17,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
 		.from(user)
 		.where(eq(user.email, userSession?.user?.email as string));
 	if (!isAdmin) {
-		return redirect("/");
+		return redirect("/dash");
 	}
 	return (
 		<div className="flex flex-row gap-4">
