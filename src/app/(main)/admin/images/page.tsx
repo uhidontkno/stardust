@@ -49,7 +49,7 @@ export default async function AdminPage() {
 							<Input id="img" placeholder="ghcr.io/spaceness/xxxx" name="dockerImage" required />
 							<Label htmlFor="icon">Icon</Label>
 							<Input id="icon" placeholder="Icon URL" name="icon" required />
-							<StyledSubmit>Submit</StyledSubmit>
+							<StyledSubmit>Save</StyledSubmit>
 						</form>
 					</DialogContent>
 				</Dialog>

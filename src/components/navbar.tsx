@@ -87,7 +87,7 @@ export default function Navigation({
 			url: "https://authjs.dev/",
 		},
 	];
-	const developers = ["incognitotgt", "1yusof", "genericness","uhidontkno"];
+	const developers = ["incognitotgt", "1yusof", "genericness", "uhidontkno"];
 	return (
 		<nav className="flex h-16 min-w-full items-center justify-between px-4">
 			<div className="flex items-center justify-start gap-2">
